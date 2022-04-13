@@ -2,7 +2,7 @@ const config = {
     title: "Which Social media channels do the partners you engage with use?",
     question: "",
     submit: "Submit",
-    thanks: "Thank you for your submission, click the “Next Video” button to proceed now.",
+    thanks: "Thank you for your submission, click the “Next video” button at the top right hand corner to proceed with this module now",
     celebrationImg_on: true,
     celebration_image: "https://a.storyblok.com/f/112136/205x150/12867bb205/sporting-hero.png",
     placeholder_text:"Type your answer here",
