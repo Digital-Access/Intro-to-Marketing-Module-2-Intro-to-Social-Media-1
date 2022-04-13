@@ -86,6 +86,12 @@ body{
     animation: slide-in 2s forwards ;
 }
 
+.thankYou{
+    width: 78%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 @keyframes slide-in {
     0%{
         transform: translateX(-100vw);
