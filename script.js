@@ -1,6 +1,6 @@
 const config = {
     title: "Which Social media channels do the partners you engage with use?",
-    question: "" ,
+    question: "",
     submit: "Submit",
     thanks: "Thank you for your submission, click the “Next Video” button to proceed now.",
     celebrationImg_on: true,
