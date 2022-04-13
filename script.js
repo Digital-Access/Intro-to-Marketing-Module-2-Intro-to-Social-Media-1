@@ -14,7 +14,7 @@ const title = document.getElementById('title');
 const question = document.getElementById('question');
 const submit = document.getElementById('submit');
 const thanks = document.getElementById('thankYou');
-const textArea =  document.getElementById('textArea');
+const textArea = document.getElementById('textArea');
 const celebration = document.getElementById('celebrationContainer');
 const celebrationImg = document.getElementById('celebration');
 const image = document.getElementById('image');
@@ -26,25 +26,32 @@ submit.textContent = config.submit
 thanks.textContent = config.thanks
 textArea.placeholder = config.placeholder_text
 
-if(config.celebrationImg_on === true){
+if (config.celebrationImg_on === true) {
     celebrationImg.src = config.celebration_image
-}else{
+} else {
     celebrationImg.style.display = 'none';
 }
 
 if (config.image_on === true) {
-    image.src = config.image 
-}else{
+    image.src = config.image
+} else {
     image.style.display = "none";
 }
 
 const finished = () => {
-    textArea.style.display = 'none';
-    celebration.style.display = 'flex';
-    celebration.style.marginTop = '2rem';
-    submit.style.display = 'none';
-    headerContainer.style.opacity = '0';
-    headerContainer.style.pointerEvents = 'none';
+    if (textArea.value.length >= 2) {
+        textArea.style.display = 'none';
+        celebration.style.display = 'flex';
+        celebration.style.marginTop = '2rem';
+        submit.style.display = 'none';
+        headerContainer.style.opacity = '0';
+        headerContainer.style.pointerEvents = 'none';
+    } else {
+        submit.textContent = 'Please add more detail to your answer.'
+        setTimeout(() => {
+            submit.textContent = config.submit
+        }, 2500);
+    }
 }
 
 submit.addEventListener('click', finished)
